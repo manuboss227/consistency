@@ -1,0 +1,163 @@
+.tasks-container {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.tasks-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.task-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-form input,
+.task-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.task-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tasks-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.completed {
+  background: #d1fae5;
+  text-decoration: line-through;
+}
+
+.priority {
+  font-weight: bold;
+}
+
+.high {
+  color: red;
+}
+
+.medium {
+  color: orange;
+}
+
+.low {
+  color: green;
+}
+
+.task-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-buttons button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.complete-btn {
+  background: #10b981;
+}
+
+.countdown {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2563eb;
+}@media screen and (max-width: 768px) {
+
+  .tasks-container {
+    padding: 15px;
+  }
+
+  .task-form {
+    width: 100%;
+  }
+
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-buttons {
+    flex-direction: column;
+  }
+
+  .task-buttons button {
+    width: 100%;
+  }
+}.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.dark .tasks-title {
+  color: white;
+}
+
+.dark .task-form {
+  background: #1e293b;
+}
+
+.dark .task-form input,
+.dark .task-form select {
+  background: #334155;
+  color: white;
+  border: none;
+}
+
+.dark .task-card {
+  background: #1e293b;
+  color: white;
+}
+
+.dark .countdown {
+  color: #60a5fa;
+}
+
+.dark input::placeholder {
+  color: #cbd5e1;
+}
