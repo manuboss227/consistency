@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.16.1",
     "chart.js": "^4.5.1",
+    "cors": "^2.8.6",
     "framer-motion": "^12.39.0",
     "git": "^0.1.5",
     "react": "^19.2.6",

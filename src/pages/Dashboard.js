@@ -27,7 +27,7 @@ function Dashboard() {
         const res =
           await axios.get(
 
-            "https://consistency-app.great-site.net/dashboard",
+            "http://localhost:5000/api/tasks/all",
 
             {
 

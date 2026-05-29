@@ -1,84 +1,110 @@
 import React from "react";
 
 import {
+
   BrowserRouter,
+
   Routes,
+
   Route,
-  Navigate
+
+  Navigate,
+
+  useLocation
+
 } from "react-router-dom";
 
-import Register
-from "./pages/Register";
+import Login from "./pages/Login";
 
-import Login
-from "./pages/Login";
+import Register from "./pages/Register";
 
-import Dashboard
-from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 
-import Tasks
-from "./pages/Tasks";
+import Tasks from "./pages/Tasks";
 
-import Navbar
-from "./components/Topbar";
+
+
+import Topbar from "./components/Topbar";
 
 import {
+
   ToastContainer
+
 } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
+
 // PROTECTED ROUTE
-function ProtectedRoute({
-  children
-}) {
+function ProtectedRoute({ children }) {
 
   const token =
-    localStorage.getItem(
-      "token"
-    );
+    localStorage.getItem("token");
 
   return token
+
     ? children
+
     : <Navigate to="/" />;
 }
 
-function App() {
+
+// APP CONTENT
+function AppContent() {
+
+  const location = useLocation();
+
+  // HIDE NAVBAR ON LOGIN & REGISTER
+  const hideNavbar =
+
+    location.pathname === "/" ||
+
+    location.pathname === "/register";
 
   return (
 
-    <BrowserRouter>
+    <>
 
-      <Navbar />
+      {
+        !hideNavbar && <Topbar />
+      }
 
       <Routes>
 
         <Route
+
           path="/"
 
           element={<Login />}
+
         />
 
         <Route
+
           path="/register"
 
           element={<Register />}
+
         />
 
         <Route
+
           path="/dashboard"
 
           element={
 
             <ProtectedRoute>
-
+              
               <Dashboard />
+              
 
             </ProtectedRoute>
           }
+
         />
 
         <Route
+
           path="/tasks"
 
           element={
@@ -89,11 +115,26 @@ function App() {
 
             </ProtectedRoute>
           }
+
         />
 
       </Routes>
 
       <ToastContainer />
+
+    </>
+  );
+}
+
+
+// MAIN APP
+function App() {
+
+  return (
+
+    <BrowserRouter>
+
+      <AppContent />
 
     </BrowserRouter>
   );

@@ -11,6 +11,7 @@ import "./Tasks.css";
 import alarmSound
 from "../sounds/alarm.mp3";
 
+
 import {
   toast
 } from "react-toastify";
@@ -81,7 +82,7 @@ function Tasks() {
         const res =
           await axios.get(
 
-            "https://consistency-app.great-site.net/tasks",
+            "http://localhost:5000/api/tasks/all",
 
             {
 

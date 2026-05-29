@@ -34,7 +34,7 @@ function Register() {
         const res =
           await API.post(
 
-            "/auth/register",
+            "http://localhost:5000/api/auth/register",
 
             {
               name,

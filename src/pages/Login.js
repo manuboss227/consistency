@@ -32,7 +32,7 @@ function Login() {
         const res =
           await axios.post(
 
-            "https://consistency-app.great-site.net/login",
+            "http://localhost:5000/api/auth/login",
 
             {
               email,
@@ -66,7 +66,7 @@ function Login() {
         setTimeout(() => {
 
           window.location.href =
-            "/";
+            "/dashboard";
 
         }, 1000);
 
