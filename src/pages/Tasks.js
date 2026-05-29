@@ -82,7 +82,7 @@ function Tasks() {
         const res =
           await axios.get(
 
-            "http://localhost:5000/api/tasks/all",
+            "https://consistency-4.onrender.com/api/tasks/all",
 
             {
 
@@ -243,7 +243,7 @@ useEffect(() => {
 
           await axios.put(
 
-            `http://localhost:5000/api/tasks/${editingId}`,
+            `https://consistency-4.onrender.com/api/tasks/${editingId}`,
 
             {
 
@@ -276,7 +276,7 @@ useEffect(() => {
 
           await axios.post(
 
-            "http://localhost:5000/api/tasks",
+            "https://consistency-4.onrender.com/api/tasks",
 
             {
 
@@ -334,7 +334,7 @@ useEffect(() => {
 
         await axios.delete(
 
-          `http://localhost:5000/api/tasks/${id}`,
+          `https://consistency-4.onrender.com/api/tasks/${id}`,
 
           {
 
@@ -402,7 +402,7 @@ useEffect(() => {
 
         await axios.put(
 
-          `http://localhost:5000/api/tasks/complete/${id}`,
+          `https://consistency-4.onrender.com/api/tasks/complete/${id}`,
 
           {},
 

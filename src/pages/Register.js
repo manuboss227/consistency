@@ -34,7 +34,7 @@ function Register() {
         const res =
           await API.post(
 
-            "http://localhost:5000/api/auth/register",
+            "https://consistency-4.onrender.com/api/auth/register",
 
             {
               name,
